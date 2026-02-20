@@ -298,12 +298,6 @@ body {
     font-weight: 500;
 }
 
-.payment-cards {
-    display: flex;
-    gap: 15px;
-    font-size: 30px;
-    color: var(--white);
-}
 
 /* ================= RESPONSIVE DESIGN (Media Queries) ================= */
 

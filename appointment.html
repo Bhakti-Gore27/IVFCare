@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClinicMaster - Book Appointment</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="appointment.css"> </head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="page-content bg-light">
+
+        <section class="page-banner" style="background-image: url('https://clinicmaster.dexignzone.com/tailwind/pediatrics/images/hero-banner/banner-1.jpg');">
+            <div class="banner-overlay"></div>
+            <div class="container relative z-10 text-center">
+                <h1 class="banner-title">Book Appointment</h1>
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><i class="fa-solid fa-chevron-right text-sm"></i></li>
+                    <li class="active">Appointment</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section-pad">
+            <div class="container">
+                <div class="appoint-layout">
+                    
+                    <div class="appoint-img-col">
+                        <div class="image-wrapper relative">
+                            <img src="https://clinicmaster.dexignzone.com/tailwind/pediatrics/images/about/img3.png" alt="Doctor" class="img-fluid rounded-2xl bg-white pt-20 shadow-img">
+                            
+                            <div class="emergency-box">
+                                <div class="icon-pulse">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                </div>
+                                <div class="text-content">
+                                    <span class="d-block text-sm text-white">Emergency Call</span>
+                                    <a href="tel:+11234567890" class="fw-bold text-white text-xl">+1 123 456 7890</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="appoint-form-col">
+                        <div class="appointment-card">
+                            <div class="form-header mb-30">
+                                <span class="theme-subtitle">Book Appointment</span>
+                                <h2 class="theme-title">Schedule Your Visit</h2>
+                                <p class="theme-desc">Fill out the form below to book your appointment. We will send you a confirmation email shortly.</p>
+                            </div>
+                            
+                            <form id="bookingForm" class="appointment-form">
+                                <div class="form-grid">
+                                    <div class="form-item form-half">
+                                        <div class="relative">
+                                            <i class="fa-regular fa-user form-icon"></i>
+                                            <input type="text" class="form-control" id="fName" placeholder="First Name" required minlength="2">
+                                        </div>
+                                    </div>
+                                    <div class="form-item form-half">
+                                        <div class="relative">
+                                            <i class="fa-regular fa-user form-icon"></i>
+                                            <input type="text" class="form-control" id="lName" placeholder="Last Name" required minlength="2">
+                                        </div>
+                                    </div>
+                                    <div class="form-item form-half">
+                                        <div class="relative">
+                                            <i class="fa-solid fa-phone form-icon"></i>
+                                            <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required pattern="[0-9]{10}">
+                                        </div>
+                                    </div>
+                                    <div class="form-item form-half">
+                                        <div class="relative">
+                                            <i class="fa-regular fa-envelope form-icon"></i>
+                                            <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-item form-half">
+                                        <div class="relative">
+                                            <i class="fa-solid fa-stethoscope form-icon"></i>
+                                            <select class="form-control custom-select" id="department" required>
+                                                <option value="" disabled selected>Select Department</option>
+                                                <option value="pediatrics">Pediatrics</option>
+                                                <option value="cardiology">Cardiology</option>
+                                                <option value="neurology">Neurology</option>
+                                                <option value="dental">Dental Care</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-item form-half">
+                                        <div class="relative">
+                                            <i class="fa-solid fa-user-doctor form-icon"></i>
+                                            <select class="form-control custom-select" id="doctor" required>
+                                                <option value="" disabled selected>Select Doctor</option>
+                                                <option value="dr_olivia">Dr. Olivia Bennett</option>
+                                                <option value="dr_michael">Dr. Michael Carter</option>
+                                                <option value="dr_sarah">Dr. Sarah Thompson</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-item form-half">
+                                        <div class="relative">
+                                            <i class="fa-regular fa-calendar-days form-icon"></i>
+                                            <input type="date" class="form-control" id="appDate" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-item form-half">
+                                        <div class="relative">
+                                            <i class="fa-regular fa-clock form-icon"></i>
+                                            <input type="time" class="form-control" id="appTime" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-item form-full">
+                                        <textarea class="form-control textarea-fix" id="message" rows="4" placeholder="Any special request or message?" required></textarea>
+                                    </div>
+                                    
+                                    <div class="form-item form-full mt-10">
+                                        <button type="submit" class="btn btn-primary w-100">Book Appointment <i class="fa-regular fa-calendar-check ms-2"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                            <div id="successMsg" class="success-alert" style="display: none;">
+                                <i class="fa-solid fa-circle-check"></i> Your appointment has been successfully booked!
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <button id="scrollTopBtn" class="scroll-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script>
+        // 1. Form Validation & Submission Logic
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent page reload
+            
+            // Show success message
+            const successMsg = document.getElementById('successMsg');
+            successMsg.style.display = 'block';
+            
+            // Optional: Hide message after 5 seconds
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+                this.reset(); // Clear form
+            }, 5000);
+        });
+
+        // 2. Scroll To Top Logic
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                scrollTopBtn.classList.add('active');
+            } else {
+                scrollTopBtn.classList.remove('active');
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 3. Header & Footer Fetch
+        window.onload = function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('header-placeholder').innerHTML = data)
+                .catch(error => console.error("Error loading header:", error));
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-placeholder').innerHTML = data)
+                .catch(error => console.error("Error loading footer:", error));
+        };
+    </script>
+
+</body>
+</html>

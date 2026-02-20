@@ -1,0 +1,330 @@
+/* ================= VARIABLES & RESET ================= */
+:root {
+    --primary-color: #1F8C9D; /* ClinicMaster Teal */
+    --text-color: #BED2E7;    /* Light Blueish-Gray Text */
+    --white: #ffffff;
+    --font-main: 'Outfit', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+}
+
+/* ================= CONTAINER & GRID SYSTEM ================= */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.align-center {
+    align-items: center;
+}
+
+/* ================= MAIN FOOTER STYLING ================= */
+.site-footer {
+    background-color: var(--primary-color);
+    background-image: url('https://clinicmaster.dexignzone.com/tailwind/pediatrics/images/background/bg1.webp');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: luminosity; /* Gives that exact dark teal theme effect */
+    color: var(--text-color);
+}
+
+.site-footer a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* ================= FOOTER HEAD (Top Logo & Button) ================= */
+.footer-head {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 40px 0 20px 0;
+}
+
+.head-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--secondary);
+    margin-right: auto; /* Pushes nav to center */
+}
+
+.logo-icon {
+    font-size: 24px;
+    color: var(--primary);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-text .title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.logo-text .sub {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.btn-outline-white {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white) !important;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+.btn-outline-white:hover {
+    background: var(--white);
+    color: var(--primary-color) !important;
+}
+
+/* ================= FOOTER TOP (Newsletter & Links) ================= */
+.footer-top {
+    padding: 60px 0;
+}
+
+.col-newsletter {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.col-links-wrapper {
+    width: 75%;
+    padding: 0 15px;
+}
+
+.col-link {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.widget-title {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.widget-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Newsletter Form */
+.newsletter-form {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.newsletter-form input {
+    width: 100%;
+    padding: 15px 25px;
+    padding-right: 50px;
+    border-radius: 30px;
+    border: 1px solid var(--white);
+    background: var(--white);
+    color: #000;
+    font-family: inherit;
+    outline: none;
+}
+
+.newsletter-form button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: var(--primary-color);
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+/* Link Lists */
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links li a {
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-links li a i {
+    font-size: 10px;
+    margin-right: 8px;
+    color: var(--primary-color);
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.footer-links li a:hover {
+    color: var(--white);
+    transform: translateX(5px);
+}
+
+.footer-links li a:hover i {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ================= FOOTER MIDDLE (Contact Info) ================= */
+.footer-middle {
+    padding-bottom: 40px;
+}
+
+.contact-box-wrapper {
+    background: rgba(255, 255, 255, 0.05); /* Transparent Box */
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.col-info {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.head-info h3 {
+    color: var(--white);
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.head-info p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.icon-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-box .icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.icon-box .text h5 {
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.icon-box .text a, .icon-box .text p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.icon-box .text a:hover {
+    color: var(--white);
+}
+
+/* ================= FOOTER BOTTOM (Copyright) ================= */
+.footer-bottom {
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.copyright p {
+    font-size: 15px;
+    margin: 0;
+}
+
+.copyright a {
+    color: var(--white);
+    font-weight: 500;
+}
+
+.payment-cards {
+    display: flex;
+    gap: 15px;
+    font-size: 30px;
+    color: var(--white);
+}
+
+/* ================= RESPONSIVE DESIGN (Media Queries) ================= */
+
+/* Tablet & iPad Pro */
+@media (max-width: 1024px) {
+    .col-newsletter { width: 100%; margin-bottom: 40px; }
+    .col-links-wrapper { width: 100%; }
+    .col-link { width: 50%; margin-bottom: 30px; }
+    
+    .col-info { width: 50%; margin-bottom: 25px; }
+    .head-info { margin-bottom: 30px; }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .head-row { flex-direction: column; text-align: center; justify-content: center; }
+    .footer-top { padding: 40px 0 10px 0; }
+    .col-link { width: 100%; }
+    
+    .contact-box-wrapper { padding: 25px 20px; }
+    .col-info { width: 100%; }
+    
+    .bottom-row { flex-direction: column; text-align: center; justify-content: center; }
+}

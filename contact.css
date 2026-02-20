@@ -1,0 +1,155 @@
+/* ================= VARIABLES & RESETS ================= */
+:root {
+    --primary: #1F8C9D;
+    --secondary: #1e293b;
+    --text: #64748b;
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+    --border: rgba(30, 41, 59, 0.6);
+    --font: 'Poppins', sans-serif;
+    --transition: 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+a { text-decoration: none; color: inherit; transition: var(--transition); }
+img { max-width: 100%; height: auto; display: block; }
+ul { list-style: none; }
+
+/* ================= GRID & UTILITIES ================= */
+.container { width: 100%; max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+.section-pad { padding: 100px 0; }
+.bg-light { background-color: var(--bg-light); }
+.bg-white { background-color: var(--white); }
+
+.row { display: flex; flex-wrap: wrap; margin: 0 -15px; }
+.flex-row { display: flex; flex-direction: row; }
+.align-center { align-items: center; }
+.align-end { align-items: flex-end; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.relative { position: relative; }
+.z-10 { z-index: 10; }
+
+/* Columns */
+.col-lg-7 { width: 58.333%; padding: 0 15px; }
+.col-lg-5 { width: 41.666%; padding: 0 15px; }
+.col-lg-3 { width: 25%; padding: 0 15px; }
+.col-md-6 { width: 50%; padding: 0 15px; }
+.col-sm-6 { width: 50%; padding: 0 15px; }
+.col-sm-12 { width: 100%; padding: 0 15px; }
+.w-100 { width: 100%; }
+
+/* Spacing & Typography */
+.text-center { text-align: center; }
+.text-white { color: var(--white) !important; }
+.text-primary { color: var(--primary) !important; }
+.fw-bold { font-weight: 700; } .m-0 { margin: 0; }
+.mt-20 { margin-top: 20px; } .mt-30 { margin-top: 30px; } .mt-40 { margin-top: 40px; } .mt-50 { margin-top: 50px; }
+.mb-30 { margin-bottom: 30px; } .mb-40 { margin-bottom: 40px; } .mb-50 { margin-bottom: 50px; }
+.pb-0 { padding-bottom: 0; } .pb-50 { padding-bottom: 50px; }
+.ms-2 { margin-left: 8px; } .pr-lg-50 { padding-right: 50px; } .pl-md-40 { padding-left: 40px; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 35px; border-radius: 10px; font-weight: 600; font-size: 16px; border: none; cursor: pointer; transition: 0.3s ease; font-family: var(--font); }
+.btn-primary { background-color: var(--primary); color: var(--white); }
+.btn-primary:hover { background-color: var(--secondary); transform: translateY(-2px); }
+.btn-rounded { border-radius: 30px; }
+
+/* ================= 1. HERO BANNER WITH FORM ================= */
+.contact-hero { padding: 150px 0 80px; min-height: 600px; background-size: cover; background-position: center; background-image: url('https://clinicmaster.dexignzone.com/tailwind/pediatrics/images/banner/bnr2.webp'); }
+.hero-bg-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(7, 18, 30, 0.7); }
+
+/* Vertical Social Links */
+.side-socials { position: absolute; left: 0; bottom: 0; height: 100%; width: 80px; border-right: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: center; align-items: center; z-index: 10; }
+.side-socials ul { display: flex; gap: 30px; writing-mode: vertical-rl; transform: rotate(180deg); }
+.side-socials a { color: var(--white); text-transform: uppercase; font-size: 14px; letter-spacing: 1px; }
+.side-socials a:hover { color: var(--primary); }
+
+.hero-wrapper { padding-left: 50px; } /* Space for side socials */
+.hero-title { font-size: 55px; font-weight: 700; line-height: 1.2; word-break: break-word; }
+.hero-image-box img { border-radius: 20px; width: 100%; }
+
+/* Contact Form Card */
+.contact-form-card { background: var(--white); border-radius: 20px; padding: 50px 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.form-header h2 { font-size: 40px; color: var(--secondary); font-weight: 700; margin-bottom: 5px; }
+.form-header p { font-size: 18px; color: var(--text); }
+
+.form-group { margin-bottom: 20px; }
+.form-icon { position: absolute; left: 0; top: 15px; font-size: 20px; color: var(--primary); }
+.form-input { width: 100%; padding: 15px 0 15px 40px; border: none; border-bottom: 1px solid var(--border); font-size: 16px; font-family: var(--font); color: var(--secondary); outline: none; transition: var(--transition); background: transparent; }
+.form-input:focus { border-bottom-color: var(--primary); }
+textarea.form-input { padding-left: 0; resize: vertical; }
+
+/* ================= 2. INFO HOVER CARDS ================= */
+.info-hover-card { background: var(--white); border-radius: 20px; padding: 25px; padding-top: 0; position: relative; height: 100%; margin-top: 40px; transition: 0.3s; box-shadow: 0 5px 20px rgba(0,0,0,0.03); }
+.info-hover-card::after { content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 5px; height: calc(100% - 40px); background: var(--primary); border-radius: 10px; opacity: 0.3; transition: 0.3s; }
+.info-hover-card:hover::after, .info-hover-card.active::after { opacity: 1; }
+
+.icon-box { width: 80px; height: 80px; background: var(--secondary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; transform: translateY(-30px); margin-bottom: -15px; transition: 0.3s; }
+.info-hover-card:hover .icon-box, .info-hover-card.active .icon-box { background: var(--primary); }
+
+.info-text h5 { font-size: 20px; color: var(--secondary); margin-bottom: 5px; font-weight: 600; }
+.info-text p, .info-text a { font-size: 15px; color: var(--text); }
+.info-text a:hover { color: var(--primary); }
+
+/* ================= 3. CTA BANNER ================= */
+.cta-banner { background-color: rgba(31, 140, 157, 0.07); border-radius: 30px; overflow: hidden; padding: 30px; margin: 0; }
+.cta-img-wrap { position: relative; margin: -30px; }
+.cta-img-wrap img { width: 100%; border-radius: 20px; }
+.cta-title { font-size: 50px; color: var(--secondary); font-weight: 700; line-height: 1.2; text-transform: capitalize; }
+
+/* ================= 4. MAP SECTION ================= */
+.map-wrapper { background: rgba(255,255,255,0.5); padding: 10px; border-radius: 20px; height: 450px; }
+.map-wrapper iframe { border-radius: 15px; width: 100%; height: 100%; }
+
+/* ================= 5. ALL LOCATIONS GRID ================= */
+.locations-title { font-size: 45px; font-weight: 700; color: var(--secondary); }
+
+.location-card { background: var(--white); border-radius: 25px; padding: 10px; height: 100%; display: flex; flex-direction: column; transition: 0.4s; box-shadow: 0 5px 20px rgba(0,0,0,0.05); cursor: pointer; }
+.location-card:hover { transform: translateY(-10px); }
+
+.loc-header { padding: 10px 20px; display: flex; align-items: center; gap: 10px; }
+.flag-icon { width: 25px; }
+.loc-header h3 { font-size: 20px; color: var(--secondary); font-weight: 600; margin: 0; }
+
+.loc-map-img { width: 100%; height: 200px; border-radius: 20px; overflow: hidden; }
+.loc-map-img img { width: 100%; height: 100%; object-fit: cover; }
+
+.loc-details { padding: 20px 15px; flex-grow: 1; }
+.loc-details p { margin-bottom: 10px; color: var(--text); }
+.loc-details a { color: var(--text); font-weight: 500; }
+
+.loc-footer { padding: 20px 30px; margin: auto -10px -10px; border-top: 1px solid rgba(0,0,0,0.08); }
+
+/* ================= SCROLL TOP ================= */
+.scroll-top { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: var(--secondary); color: var(--white); border: none; border-radius: 50%; font-size: 20px; cursor: pointer; opacity: 0; visibility: hidden; transition: 0.3s; z-index: 999; }
+.scroll-top.active { opacity: 1; visibility: visible; }
+.scroll-top:hover { background: var(--primary); transform: translateY(-3px); }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1200px) {
+    .hide-mobile { display: none; }
+    .hero-wrapper { padding-left: 0; }
+}
+
+@media (max-width: 1024px) {
+    .col-lg-7, .col-lg-5, .col-lg-3 { width: 100%; padding: 0 15px; }
+    .col-md-6 { width: 50%; }
+    .pr-lg-50 { padding-right: 15px; } .pl-lg-30 { padding-left: 15px; }
+    .mb-mob-40 { margin-bottom: 40px; }
+    
+    .hero-title { font-size: 45px; }
+    .contact-form-card { padding: 30px; }
+    .cta-title { font-size: 35px; }
+}
+
+@media (max-width: 768px) {
+    .col-sm-6, .col-md-6 { width: 100%; }
+    .mt-mob-30 { margin-top: 30px; }
+    .text-mob-center { text-align: center; }
+    .hero-title { font-size: 35px; }
+    .cta-img-wrap { margin: 0; }
+    .cta-banner { padding: 20px; }
+    .locations-title { font-size: 35px; }
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IVFCare - My Profile</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="profile.css"> </head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="page-content bg-light">
+
+        <section class="page-banner" style="background-image: url('https://clinicmaster.dexignzone.com/tailwind/pediatrics/images/hero-banner/banner-1.jpg');">
+            <div class="banner-overlay"></div>
+            <div class="container relative z-10 text-center">
+                <h1 class="banner-title">My Profile</h1>
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><i class="fa-solid fa-chevron-right text-sm"></i></li>
+                    <li class="active">Profile</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section-pad">
+            <div class="container row">
+                
+                <div class="col-lg-4 col-md-12 mb-mob-40">
+                    <div class="profile-sidebar-card">
+                        <div class="user-info text-center border-bottom pb-30 mb-30">
+                            <div class="avatar-wrapper">
+                                <img src="https://clinicmaster.dexignzone.com/tailwind/pediatrics/images/testimonial/large/img1.webp" alt="User Avatar">
+                                <button class="edit-avatar-btn"><i class="fa-solid fa-camera"></i></button>
+                            </div>
+                            <h3 class="user-name">Kenneth Fong</h3>
+                            <p class="user-email">kenneth.fong@example.com</p>
+                            <span class="badge badge-primary">Patient</span>
+                        </div>
+                        
+                        <ul class="profile-nav">
+                            <li><a href="#" class="active"><i class="fa-regular fa-user"></i> Profile Overview</a></li>
+                            <li><a href="#"><i class="fa-regular fa-calendar-check"></i> My Appointments</a></li>
+                            <li><a href="#"><i class="fa-solid fa-file-medical"></i> Medical Records</a></li>
+                            <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                            <li><a href="#" class="text-danger"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-8 col-md-12">
+                    
+                    <div class="profile-content-card mb-30">
+                        <div class="card-header border-bottom pb-20 mb-30">
+                            <h3 class="card-title m-0">Personal Information</h3>
+                            <a href="#" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-pen ms-0 me-2"></i> Edit</a>
+                        </div>
+                        
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="label">Full Name</span>
+                                <span class="value">Kenneth Fong</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Date of Birth</span>
+                                <span class="value">14 Feb, 1995 (29 Years)</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Gender</span>
+                                <span class="value">Male</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Blood Group</span>
+                                <span class="value text-primary">O+</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Phone Number</span>
+                                <span class="value">+1 123 456 7890</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Email Address</span>
+                                <span class="value">kenneth.fong@example.com</span>
+                            </div>
+                            <div class="info-item full-width">
+                                <span class="label">Address</span>
+                                <span class="value">1247/Plot No. 39, 15th Phase, Colony, Kukatpally, Hyderabad, India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-content-card">
+                        <div class="card-header border-bottom pb-20 mb-30">
+                            <h3 class="card-title m-0">Upcoming Appointments</h3>
+                            <a href="appointment.html" class="btn btn-primary btn-sm">Book New</a>
+                        </div>
+                        
+                        <div class="table-responsive">
+                            <table class="clinic-table">
+                                <thead>
+                                    <tr>
+                                        <th>Doctor</th>
+                                        <th>Department</th>
+                                        <th>Date & Time</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flex-row align-center gap-10">
+                                                <img src="https://clinicmaster.dexignzone.com/tailwind/pediatrics/images/avatar/middle/img1.jpg" alt="Dr" class="tbl-avatar">
+                                                <span class="fw-bold text-dark w-max">Dr. Olivia Bennett</span>
+                                            </div>
+                                        </td>
+                                        <td>Pediatrics</td>
+                                        <td>
+                                            <span class="d-block fw-bold text-dark w-max">12 Oct 2024</span>
+                                            <span class="text-sm">10:30 AM</span>
+                                        </td>
+                                        <td><span class="badge badge-warning">Pending</span></td>
+                                        <td>
+                                            <div class="flex-row">
+                                                <button class="action-btn text-primary"><i class="fa-regular fa-eye"></i></button>
+                                                <button class="action-btn text-danger"><i class="fa-solid fa-xmark"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flex-row align-center gap-10">
+                                                <img src="https://clinicmaster.dexignzone.com/tailwind/pediatrics/images/avatar/middle/img2.jpg" alt="Dr" class="tbl-avatar">
+                                                <span class="fw-bold text-dark w-max">Dr. Michael Carter</span>
+                                            </div>
+                                        </td>
+                                        <td>Dermatology</td>
+                                        <td>
+                                            <span class="d-block fw-bold text-dark w-max">25 Nov 2024</span>
+                                            <span class="text-sm">02:00 PM</span>
+                                        </td>
+                                        <td><span class="badge badge-success">Confirmed</span></td>
+                                        <td>
+                                            <div class="flex-row">
+                                                <button class="action-btn text-primary"><i class="fa-regular fa-eye"></i></button>
+                                                <button class="action-btn text-danger"><i class="fa-solid fa-xmark"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <button id="scrollTopBtn" class="scroll-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script>
+        // Scroll To Top Logic
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                scrollTopBtn.classList.add('active');
+            } else {
+                scrollTopBtn.classList.remove('active');
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Header & Footer Fetch
+        window.onload = function() {
+            fetch('header.html')
+                .then(res => res.text())
+                .then(data => document.getElementById('header-placeholder').innerHTML = data)
+                .catch(err => console.error("Error loading header:", err));
+
+            fetch('footer.html')
+                .then(res => res.text())
+                .then(data => document.getElementById('footer-placeholder').innerHTML = data)
+                .catch(err => console.error("Error loading footer:", err));
+        };
+    </script>
+
+</body>
+</html>

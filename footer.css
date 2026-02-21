@@ -1,7 +1,8 @@
 /* ================= VARIABLES & RESET ================= */
 :root {
-    --primary-color: #1F8C9D; /* ClinicMaster Teal */
-    --text-color: #BED2E7;    /* Light Blueish-Gray Text */
+    --primary-color: #f07fb3; /* Theme Pink */
+    --text-color: #64748b;    /* Light Gray Text */
+    --secondary: #2e3a8c;     /* Theme Blue */
     --white: #ffffff;
     --font-main: 'Outfit', sans-serif;
 }

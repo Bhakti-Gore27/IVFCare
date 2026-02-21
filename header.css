@@ -1,7 +1,7 @@
 /* ================= VARIABLES & RESET ================= */
 :root {
-  --primary: #1f8c9d; /* Theme Teal */
-  --secondary: #1e293b; /* Dark Heading Color */
+  --primary: #f07fb3; /* Theme Pink */
+  --secondary: #2e3a8c; /* Theme Blue */
   --body-text: #64748b; /* Light Gray Text */
   --border-color: #e2e8f0;
   --white: #ffffff;
@@ -12,12 +12,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Quicksand, sans-serif;
 }
 
 body {
   font-family: var(--font-main);
   color: var(--body-text);
   overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 a {
@@ -39,6 +44,36 @@ ul {
   background: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  will-change: background, border-bottom, box-shadow;
+}
+
+.site-header.scrolled {
+  background: var(--white);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.site-header.scrolled .desktop-nav > ul > li > a {
+  color: var(--secondary);
+}
+
+.site-header.scrolled .desktop-nav > ul > li > a:hover {
+  color: var(--primary);
+}
+
+.site-header.scrolled .nav-toggle span {
+  background: var(--secondary);
+}
+
+.site-header.scrolled .header-right .contact-widget .info .label,
+.site-header.scrolled .header-right .contact-widget .info .phone {
+  color: var(--secondary);
+}
+
+.site-header.scrolled .header-right .btn-appointment {
+  background: var(--primary);
+  color: var(--white);
 }
 
 .site-header .container {
@@ -54,14 +89,16 @@ ul {
 /* Toggle Button (Desktop Left) */
 .nav-toggle {
   background: transparent;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 18px;
-  width: 25px;
-  margin-right: 25px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 18px;
+    width: 25px;
+    margin-right: 25px;
+    z-index: 1000; /* Ensure it's above other elements */
+    position: relative;
 }
 
 .nav-toggle span {
@@ -111,20 +148,20 @@ ul {
 
 .desktop-nav > ul > li > a {
   color: white;
-  font-weight: 500;
+ 
   font-size: 16px;
   display: flex;
   align-items: center;
   gap: 6px;
   padding: 30px 0; /* Creates large hover area */
-  font-family: Poppins, "sans-serif";
   font-size: 18px;
   font-weight: 500;
   line-height: 30px;
+  font-weight: 700;
 }
 
 .desktop-nav > ul > li > a:hover {
-  color: #2e3a8c;
+  color: var(--secondary);
 }
 
 .text-xs {
@@ -140,40 +177,47 @@ ul {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 220px;
+  width: 280px;
   background: var(--white);
-  border-top: 2px solid var(--primary);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(15px);
-  transition: all 0.3s ease;
+  transform: translateY(10px) scale(0.95);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
-  gap: 0; /* Reset gap for vertical list */
+  padding: 8px 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .has-dropdown:hover .dropdown {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 .dropdown li a {
   color: var(--body-text);
-  padding: 12px 20px;
+  padding: 10px 20px;
   display: block;
-  font-size: 14px;
-  border-bottom: 1px solid var(--border-color);
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  position: relative;
+  border-radius: 6px;
+  margin: 0 8px 2px 8px;
 }
 
 .dropdown li:last-child a {
-  border-bottom: none;
+  margin-bottom: 0;
 }
 
 .dropdown li a:hover {
-  color: #e75297;
-  padding-left: 25px; /* Nice sliding effect on hover */
+  background-color: var(--secondary);
+  color: var(--white);
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(46, 58, 140, 0.15);
 }
 
 /* ================= HEADER RIGHT (Contact & Button) ================= */
@@ -214,16 +258,13 @@ ul {
 }
 
 .contact-widget .label {
-  color: #2e3a8c;
-  font-family: Poppins, "sans-serif";
+  color: var(--secondary);
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  color: rgb(34, 118, 117);
 }
 
 .contact-widget .phone {
-  font-family: Poppins, "sans-serif";
   font-size: 18px;
   font-weight: 600;
   line-height: 28px;
@@ -231,36 +272,35 @@ ul {
 }
 
 .btn-appointment {
-  background-color: #e75297;
+  background-color: var(--primary);
   color: var(--white);
   padding: 12px 28px;
   border-radius: 30px;
   font-weight: 500;
   box-shadow: 0 4px 6px rgba(31, 140, 157, 0.3);
-  font-family: Poppins, "sans-serif";
+  
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
-  color: rgb(255, 255, 255);
 }
 
 .btn-appointment:hover {
-  background-color: #f07fb3;
+  background-color: var(--primary);
   color: var(--white);
 }
 
 /* ================= SIDEBARS & OVERLAYS ================= */
 .menu-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 998;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s ease;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9998; /* Just below sidebars */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
 }
 
 .menu-overlay.active {
@@ -271,15 +311,15 @@ ul {
 /* Right Info Sidebar (Desktop) */
 .right-info-sidebar {
   position: fixed;
-  top: 0;
-  right: -450px; /* Hidden state */
-  width: 400px;
-  height: 100vh;
-  background: var(--white);
-  z-index: 999;
-  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
-  transition: 0.5s ease;
-  overflow-y: auto;
+    top: 0;
+    right: -450px;
+    width: 400px;
+    height: 100vh;
+    background: var(--white);
+    z-index: 9999; /* Increased z-index */
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+    transition: 0.5s ease;
+    overflow-y: auto;
 }
 
 .right-info-sidebar.active {
@@ -387,7 +427,7 @@ ul {
   width: 300px;
   height: 100vh;
   background: var(--white);
-  z-index: 999;
+  z-index: 10000; /* Higher than overlay */
   transition: 0.5s ease;
   overflow-y: auto;
   display: flex;

@@ -64,6 +64,28 @@ window.onload = function() {
         })
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
+            // Load header.js after inserting header
+            let script = document.createElement('script');
+            script.src = 'header.js';
+            document.body.appendChild(script);
+            
+            // Add scroll listener for navbar background change
+            let scrollTimeout;
+            window.addEventListener('scroll', () => {
+                if (!scrollTimeout) {
+                    scrollTimeout = setTimeout(() => {
+                        const header = document.querySelector('.site-header');
+                        if (header) {
+                            if (window.scrollY > 100) {
+                                header.classList.add('scrolled');
+                            } else {
+                                header.classList.remove('scrolled');
+                            }
+                        }
+                        scrollTimeout = null;
+                    }, 10); // Throttle to 100fps
+                }
+            });
         })
         .catch(error => console.error("Error loading header:", error));
 

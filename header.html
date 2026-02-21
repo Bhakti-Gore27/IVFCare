@@ -1,172 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ivfCare - Custom Header</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="header.css">
-</head>
-<body>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="header.css" />
+  </head>
+  <body>
     <div class="menu-overlay" id="menuOverlay"></div>
 
     <header class="site-header">
-        <div class="container">
-            
-            <button class="nav-toggle desktop-only" id="openRightSidebar">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+      <div class="container">
+        <button class="nav-toggle desktop-only" id="openRightSidebar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-            <a href="#" class="logo">
-                <img class="ivf-logo" src="images/IVFlogo-removebg-preview.png">
-            </a>
+        <a href="#" class="logo">
+          <img class="ivf-logo" src="images/IVFlogo-removebg-preview.png" />
+        </a>
 
-            <nav class="desktop-nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li class="has-dropdown">
-                        <a href="#">Pages <i class="fa-solid fa-chevron-down text-xs"></i></a>
-                        <ul class="dropdown">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Appointment</a></li>
-                            <li><a href="#">Testimonial</a></li>
-                            <li><a href="#">Our Team</a></li>
-                            <li><a href="#">FAQs</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="#">Services <i class="fa-solid fa-chevron-down text-xs"></i></a>
-                        <ul class="dropdown">
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Service Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="#">Blogs <i class="fa-solid fa-chevron-down text-xs"></i></a>
-                        <ul class="dropdown">
-                            <li><a href="#">Blog Grid</a></li>
-                            <li><a href="#">Blog List Sidebar</a></li>
-                            <li><a href="#">Blog Details</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </nav>
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li class="has-dropdown">
+              <a href="#"
+                >Pages <i class="fa-solid fa-chevron-down text-xs"></i
+              ></a>
+              <ul class="dropdown">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Appointment</a></li>
+                <li><a href="#">Testimonial</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">FAQs</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="#"
+                >Services <i class="fa-solid fa-chevron-down text-xs"></i
+              ></a>
+              <ul class="dropdown">
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Service Details</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="#"
+                >Blogs <i class="fa-solid fa-chevron-down text-xs"></i
+              ></a>
+              <ul class="dropdown">
+                <li><a href="#">Blog Grid</a></li>
+                <li><a href="#">Blog List Sidebar</a></li>
+                <li><a href="#">Blog Details</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </nav>
 
-            <div class="header-right desktop-only">
-                <div class="contact-widget">
-                    <div class="icon-box"><i class="fa-solid fa-phone-volume"></i></div>
-                    <div class="info">
-                        <span class="label">Contact us</span>
-                        <a href="tel:+11234567890" class="phone">+1 123 456 7890</a>
-                    </div>
-                </div>
-                <a href="#" class="btn-appointment">Appointment</a>
+        <div class="header-right desktop-only">
+          <div class="contact-widget">
+            <div class="icon-box"><i class="fa-solid fa-phone-volume"></i></div>
+            <div class="info">
+              <span class="label">Contact us</span>
+              <a href="tel:+11234567890" class="phone">+1 123 456 7890</a>
             </div>
-
-            <button class="mobile-toggle mobile-only" id="openMobileMenu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
+          </div>
+          <a href="#" class="btn-appointment">Appointment</a>
         </div>
+
+        <button class="mobile-toggle mobile-only" id="openMobileMenu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </header>
 
     <div class="mobile-menu-sidebar" id="mobileMenu">
-        <div class="mobile-header">
-            <h3 class="logo-title">IVFCare</h3>
-            <button class="close-btn" id="closeMobileMenu"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <ul class="mobile-nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Pages</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Blogs</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-        <div class="mobile-socials">
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </div>
+      <div class="mobile-header">
+        <img class="ivf-logo" src="images/IVFlogo-removebg-preview.png" />
+        <button class="close-btn" id="closeMobileMenu">
+          
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <div class="mobile-socials">
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
     </div>
 
     <div class="right-info-sidebar" id="rightSidebar">
-        <div class="sidebar-header">
-            <h3 class="logo-title">IVFCare</h3>
-            <button class="close-btn" id="closeRightSidebar"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <div class="sidebar-content">
-            <p class="desc">IVFCare is a modern and responsive HTML template designed for health and medical websites. Ideal for clinics, hospitals, and healthcare professionals.</p>
-            
-            <div class="widget">
-                <h4>Contact Us</h4>
-                <ul class="contact-list">
-                    <li><i class="fa-solid fa-location-dot"></i> 785 15h Street, Berlin, De 81566</li>
-                    <li><i class="fa-solid fa-envelope"></i> email@domain.com</li>
-                    <li><i class="fa-solid fa-phone"></i> +1 123 456 7890</li>
-                </ul>
-            </div>
+      <div class="sidebar-header">
+        <img class="ivf-logo" src="images/IVFlogo-removebg-preview.png" />
+        <button class="close-btn" id="closeRightSidebar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="sidebar-content">
+        <p class="desc">
+          IVFCare is a modern and responsive HTML template designed for health
+          and medical websites. Ideal for clinics, hospitals, and healthcare
+          professionals.
+        </p>
 
-            <div class="widget">
-                <h4>Newsletter</h4>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Your Email Address">
-                    <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
-                </form>
-            </div>
-
-            <div class="widget">
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                </div>
-            </div>
+        <div class="widget">
+          <h4>Contact Us</h4>
+          <ul class="contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i> 785 15h Street, Berlin,
+              De 81566
+            </li>
+            <li><i class="fa-solid fa-envelope"></i> email@domain.com</li>
+            <li><i class="fa-solid fa-phone"></i> +1 123 456 7890</li>
+          </ul>
         </div>
+
+        <div class="widget">
+          <h4>Newsletter</h4>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your Email Address" />
+            <button type="submit">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+
+        <div class="widget">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <section class="hero-placeholder"></section>
 
-    <script>
-        const menuOverlay = document.getElementById('menuOverlay');
-        
-        // Mobile Menu Elements
-        const openMobileMenu = document.getElementById('openMobileMenu');
-        const closeMobileMenu = document.getElementById('closeMobileMenu');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        // Right Sidebar Elements
-        const openRightSidebar = document.getElementById('openRightSidebar');
-        const closeRightSidebar = document.getElementById('closeRightSidebar');
-        const rightSidebar = document.getElementById('rightSidebar');
-
-        // Functions
-        function openSidebar(element) {
-            element.classList.add('active');
-            menuOverlay.classList.add('active');
-        }
-
-        function closeAllSidebars() {
-            mobileMenu.classList.remove('active');
-            rightSidebar.classList.remove('active');
-            menuOverlay.classList.remove('active');
-        }
-
-        // Event Listeners
-        openMobileMenu.addEventListener('click', () => openSidebar(mobileMenu));
-        closeMobileMenu.addEventListener('click', closeAllSidebars);
-        
-        openRightSidebar.addEventListener('click', () => openSidebar(rightSidebar));
-        closeRightSidebar.addEventListener('click', closeAllSidebars);
-        
-        menuOverlay.addEventListener('click', closeAllSidebars);
-    </script>
-</body>
+    <script src="header.js"></script>
+  </body>
 </html>

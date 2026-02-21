@@ -1,6 +1,6 @@
 :root {
-  --primary: #1f8c9d; /* Theme Teal */
-  --secondary: #1e293b; /* Dark Heading Color */
+  --primary: #f07fb3; /* Theme Pink */
+  --secondary: #2e3a8c; /* Theme Blue */
   --text-color: #64748b; /* Light Gray Text */
   --bg-light: #f8fafc; /* Light Background */
   --white: #ffffff;
@@ -12,6 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Quicksand, sans-serif;
 }
 body {
   font-family: var(--font-main);
@@ -139,7 +140,7 @@ img {
   color: var(--primary) !important;
 }
 .text-warning {
-  color: #f59e0b;
+  color: var(--primary);
 }
 .fw-bold {
   font-weight: 700;
@@ -242,9 +243,9 @@ img {
   
 }
 .hero-title {
-   font-family: Poppins, "sans-serif";
+   
     font-size: 85px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 102px;
     color: rgb(255, 255, 255);
     
@@ -252,7 +253,7 @@ img {
 }
 .hero-desc {
     margin-top :10px;
-    font-family: Poppins, "sans-serif";
+    
   font-size: 20px;
   color: var(--white);
   max-width: 550px;
